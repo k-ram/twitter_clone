@@ -5,6 +5,6 @@
 	
 @section('content')
 
-    <div class="title">Twitter Clone</div>
+<div class="title">Twitter Clone</div>
 
 @endsection

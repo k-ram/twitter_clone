@@ -21,24 +21,24 @@
                 font-family: 'Lato';
             }
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
             .title {
                 font-size: 96px;
+                text-align: center;
             }
         </style>
     </head>
     <body>
         <div class="container">
+
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </nav>
+
             <div class="content">
                 
                 @yield('content')

@@ -1,0 +1,41 @@
+* {
+    text-decoration: none;
+    list-style: none;
+}
+
+html, body {
+        height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+    font-weight: 100;
+    font-family: 'Lato';
+}
+
+.container {
+    text-align: center;
+    width: 100%;    
+}
+
+.content {
+    text-align: center;
+    display: inline-block;
+}
+
+
+.title {
+    display: table-cell;
+    height: 100%;
+    font-size: 96px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.navbar ul li {
+    display: inline-block;
+    padding: 5px 10px;
+}

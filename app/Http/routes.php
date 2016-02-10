@@ -22,6 +22,9 @@ Route::get('logout', 'Auth\AuthController@logout')->middleware('web');
 Route::get('login', 'Auth\AuthController@getLogin')->middleware('web');
 Route::post('login', 'Auth\AuthController@postLogin')->middleware('web');
 
+Route::get('account', 'AccountController@index')->middleware(['web', 'auth']);
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

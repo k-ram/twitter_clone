@@ -6,31 +6,15 @@
         <meta name="description" content="@yield('meta-description')">
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+        {{-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> --}}
+        <link rel="stylesheet" type="text/css" href="css/main.css">
 
-        <style>
-            html, body {
-                height: 100%;
-            }
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .title {
-                font-size: 96px;
-                text-align: center;
-            }
-        </style>
     </head>
     <body>
         <div class="container">
 
-            <nav>
+            <nav class="navbar">
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/contact">Contact</a></li>

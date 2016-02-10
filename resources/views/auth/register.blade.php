@@ -13,12 +13,17 @@
 
 	<div>
 		<label for="name">Full Name: </label>
-		<input type="text" name="name" id="name" placeholder="Kirsty Ramage">
+		<input type="text" name="name" value=" {{ old('name') }} " id="name" placeholder="Kirsty Ramage">
+	</div>
+
+	<div>
+		<label for="username">Username: </label>
+		<input type="text" name="username" value=" {{ old('username') }} " id="username" placeholder="Koolkat">
 	</div>
 	
 	<div>
 		<label for="email">E-mail: </label>
-		<input type="email" name="email" id="email" placeholder="kristy@twitterclone.com">
+		<input type="email" name="email" value=" {{ old('email') }} " id="email" placeholder="kristy@twitterclone.com">
 	</div>
 
 	<div>

@@ -1,6 +1,6 @@
 @extends('master')
 
-@section('title', 'Account')
+@section('title', 'Profile')
 @section('meta-description', 'Users account details')
 	
 @section('content')
@@ -14,7 +14,7 @@
 
 <h2>Write a new Tweet</h2>
 
-<form action="/account/new-tweet" method="post">
+<form action="/profile/new-tweet" method="post">
 	
 {!! csrf_field() !!}
 

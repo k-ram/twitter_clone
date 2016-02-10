@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Tweet;
+use App\User;
 
 class ProfileController extends Controller
 {
@@ -33,6 +34,16 @@ class ProfileController extends Controller
     	$newTweet->save();
 
     	return redirect('profile');
+
+    }
+
+    public function show($username){
+
+        // Find the user
+        $user = User::where('username', '=', $username)->firstOrFail();
+
+        // return $user;
+        return view('profile.show', compact('user'));
 
     }
 }

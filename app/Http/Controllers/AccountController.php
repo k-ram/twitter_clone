@@ -6,12 +6,33 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Tweet;
 
 class AccountController extends Controller
 {
     public function index() {
 
-    	 return view('account.index');
+    	// Count the total amount of posts by this user
+    	$totalTweets = \Auth::user()->tweets()->count();
+
+    	return view('account.index', compact('totalTweets'));
+
+    }
+
+    public function newTweet( Request $request ){
+
+    	$this->validate($request, [
+    		'content'=>'required|max:140'
+    	]);
+
+    	$newTweet = new Tweet();
+
+    	$newTweet->content = $request->content;
+    	$newTweet->user_id = \Auth::user()->id;
+
+    	$newTweet->save();
+
+    	return redirect('account');
 
     }
 }

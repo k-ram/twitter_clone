@@ -7,18 +7,18 @@
 
 <div class="title">Log into your account</div>
 
-<form action="/login" method="post" class="">
+<form action="/login" method="post" class="form-group">
 
 	{!! csrf_field() !!}
 	
 	<div>
-		<label for="email" class="">E-mail: </label>
-		<input type="email" name="email" value="{{ old('email') }}" class="" id="email" placeholder="kristy@twitterclone.com">
+		<label for="email" class="control-label">E-mail: </label>
+		<input type="email" name="email" value="{{ old('email') }}" class="control-input" id="email" placeholder="kristy@twitterclone.com">
 	</div>
 
 	<div>
-		<label for="password" class="">Password: </label>
-		<input type="password" name="password" class="" id="password">
+		<label for="password" class="control-label">Password: </label>
+		<input type="password" name="password" class="control-input" id="password">
 	</div>
 
 

@@ -32,6 +32,10 @@
 			<p> {{ $tweet->content }} </p>
 			<small>Posted {{ $tweet->created_at }} by {{ $tweet->user->name }}</small>
 
+			@if( \Auth::check() && $tweet->user->id == \Auth::user()->id )
+				<a href="/profile/delete-tweet/{{ $tweet->id }}">Delete</a>
+			@endif
+
 			<h2>Comments: </h2>
 			@if(\Auth::check())
 

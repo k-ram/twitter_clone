@@ -5,7 +5,7 @@
         <title>@yield('title') - Twitter Clone</title>
         <meta name="description" content="@yield('meta-description')">
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="/css/main.css">
 
 

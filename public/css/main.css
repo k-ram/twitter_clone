@@ -38,12 +38,12 @@ body {
 }
 
 .form-group {
-    display: table;
-    content: " ";
+    /*display: table;*/
+    /*content: " ";*/
 
-    clear: both;
+    /*clear: both;*/
 
-    padding-top: 7px;
+    /*padding-top: 7px;*/
     /*margin-top: 0;*/
     /*margin-bottom: 0;*/
 
@@ -51,24 +51,27 @@ body {
 }
 
 .control-label {
-    padding-top: 7px;
-    margin-bottom: 0;
-    text-align: right;
-    width: 30%;
+    font-family: "Lato";
+    font-weight: 700;
+    /*padding-top: 7px;*/
+    /*margin-bottom: 0;*/
+    /*text-align: right;*/
+    /*width: 30%;*/
 
-    padding-top: 14.333333px;
-    font-size: 18px;
+    /*padding-top: 14.333333px;*/
+    /*font-size: 18px;*/
 
-    padding-top: 6px;
-    font-size: 12px;
+    /*padding-top: 6px;*/
+    /*font-size: 12px;*/
 }
 
-.form-control{
-    display: inline-block;
-  width: 70%;
+.control-input{
+
+    /*display: inline-block;*/
+  /*width: 70%;*/
   /*height: 34px;*/
   /*padding: 6px 12px;*/
-  font-size: 14px;
+  /*font-size: 14px;*/
   /*line-height: 1.42857143;*/
   /*color: #555;*/
   /*background-color: #fff;*/
@@ -79,6 +82,7 @@ body {
 
     /*height: 30px;*/
   padding: 5px 10px;
+  margin: 5px 0;
   /*font-size: 12px;*/
   /*line-height: 1.5;*/
   /*border-radius: 3px;*/

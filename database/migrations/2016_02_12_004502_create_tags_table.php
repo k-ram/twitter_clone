@@ -30,4 +30,6 @@ class CreateTagsTable extends Migration
     {
         Schema::drop('tags');
     }
+
+    // php artisan make:migration create_tags_table --create="tags" <- in commandline to create this
 }

@@ -33,6 +33,11 @@
 		<textarea name="content" id="content" cols="30" rows="10">{{ old('content') }}</textarea>
 	</div>
 
+	<div>
+		<label for="tags">Tags: </label>
+		<textarea name="tags" id="tags" placeholder="#hashlikethis">{{ old('tags')}}</textarea>
+	</div>
+
 	<input type="submit" value="Post">
 
 </form>

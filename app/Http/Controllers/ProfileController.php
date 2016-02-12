@@ -10,6 +10,7 @@ use App\Tweet;
 use App\User;
 use App\Comment;
 use Intervention\Image\ImageManager;
+use App\Tag;
 
 class ProfileController extends Controller
 {
@@ -34,6 +35,36 @@ class ProfileController extends Controller
     	$newTweet->user_id = \Auth::user()->id;
 
     	$newTweet->save();
+
+        // Process the tags
+        $tags = explode('#', $request->tags);
+
+        $tagsFormatted = [];
+
+        // Clean up the tags
+        foreach ($tags as $tag){
+            
+            // If after trimming, something remains
+            if ( trim($tag) ) {
+                $tagsFormatted[] = strtolower(trim($tag));
+            }
+        }
+
+        $allTagIds = [];
+
+        foreach ($tagsFormatted as $tag) {
+            
+            // Grab the first matching result OR insert this new unique tag
+            $theTag = Tag::firstOrCreate(['name'=>$tag]);
+
+            $allTagIds[] = $theTag->id;
+
+        }
+
+        // Attach the tag ids to the tweet
+        $newTweet->tags()->attach($allTagIds);
+
+        // return $allTagIds;
 
     	return redirect('profile');
 
